@@ -13,6 +13,7 @@ function App() {
       <div>
         <Navbar />
         <Routes>
+         <Route path="/" element={<HomePage />} />
           <Route path="/homePage" element={<HomePage />} /> {/* Rota para a Página Inicial */}
           <Route path="/tabela" element={<Tabela />} /> {/* Rota para a Tabela */}
           <Route path="/grafico" element={<Grafico/>} /> {/* Rota para a Tabela */}

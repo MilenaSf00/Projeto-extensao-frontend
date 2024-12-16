@@ -7,7 +7,7 @@
     padding: 1rem; /* Espaçamento interno */
     position: fixed; /* Mantém o footer fixo na parte inferior */
     bottom: 0; /* Alinha o footer na parte inferior */
-    width: 100%; /* Largura total */
+    width: 200%; /* Largura total */
     margin-top: 2rem; /* Espaçamento superior para garantir que não fique colado no conteúdo */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
   }

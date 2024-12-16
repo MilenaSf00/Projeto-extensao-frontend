@@ -1,86 +1,154 @@
-/* Components/HomePage.css */
+/* Estilo Geral */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%; /* Garante que ocupa toda a tela */
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+  height: 100%; /* Garante que o body preencha a tela */
+}
+
 .landing-page {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Alinha verticalmente */
-    padding: 4rem 0 0;
-    padding: 0; /* Remove o padding para ocupar toda a página */
-    background-color: #f4f4f4; /* Cor de fundo clara */
-    min-height: 100vh; /* Altura mínima da tela */
-    box-sizing: border-box; /* Inclui padding na largura total */
-    gap: 2rem; /* Espaço entre as seções */
-  }
-  
-  .left-section, .right-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente dentro das seções */
-    text-align: center; /* Alinha o texto no centro */
-    background: #ffffff; /* Cor de fundo branca */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
-    padding: 8rem; /* Espaçamento interno */
-  }
-  
-  .left-section {
-    max-width: 600px; /* Largura máxima para a seção de texto */
-  }
-  
-  .right-section {
-    max-width: 300px; /* Largura máxima para a seção de ícones */
-    gap: 1.5rem; /* Espaço entre os itens */
-  }
-  
-  h1 {
-    font-size: 2.5rem; /* Tamanho da fonte do título */
-    color: #333333; /* Cor do título */
-    margin: 0 0 1rem; /* Margem inferior */
-  }
-  
-  .description {
-    font-size: 1.2rem; /* Tamanho da fonte da descrição */
-    color: #666666; /* Cor do texto da descrição */
-    line-height: 1.6; /* Altura da linha */
-    margin: 0; /* Remove margem padrão */
-  }
-  
-  .icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  width: 100%; /* Ajusta para telas grandes */
+  min-height: 100vh; /* Garante que preencha a tela */
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px; /* Aumenta o padding para dar mais espaço no topo */
+  background: linear-gradient(135deg, #24cc86, #137a63);
+  color: white;
+  text-align: center;
+  width: 200%; /* Garante que ocupe toda a largura da tela */
+  min-height: 70vh; /* Garante que ocupe toda a altura da tela */
+  margin-top: 0; /* Remove qualquer margem extra do topo */
+  box-sizing: border-box;
+}
+
+.hero-text {
+  flex: 1 1 200%; /* Garante que o texto ocupe 100% da largura */
+  padding: 10px;
+  max-width: 200%; /* Garante que o texto ocupe 100% da largura */
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #137a63;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #137a63;
+  color: #fff;
+}
+
+.hero-image img {
+  max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Alinha os itens no centro */
+  gap: 20px; /* Espaçamento entre os recursos */
+  padding: 20px;
+  background: #f9f9f9;
+  width: 100%;
+}
+
+.feature {
+  text-align: center;
+  flex: 1 1 300px; /* Largura mínima de cada recurso */
+  margin: 10px;
+  max-width: 400px; /* Impede que fiquem muito largos */
+}
+
+.feature .icon {
+  color: #b2f7b7;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .hero-section {
+    flex-direction: column; /* Empilha itens em telas menores */
     text-align: center;
-    background: #ffffff; /* Fundo branco para contraste */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
   }
-  
-  .icon {
-    color: #007bff; /* Cor dos ícones */
+
+  .hero-text {
+    max-width: 100%; /* Texto ocupa toda a largura */
+    padding: 10px;
   }
-  
-  .graph-icon {
-    margin-bottom: 0.5rem; /* Espaçamento abaixo do ícone do gráfico */
+
+  .features-section {
+    flex-direction: column; /* Empilha os recursos */
+    align-items: center;
   }
-  
-  .report-icon {
-    margin-bottom: 0.5rem; /* Espaçamento abaixo do ícone do relatório */
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.5rem; /* Reduz o tamanho do texto principal */
   }
-  
-  .icon-label {
-    font-size: 1.25rem; /* Tamanho da fonte do rótulo */
-    color: #333333; /* Cor do texto do rótulo */
+
+  .cta-button {
+    padding: 8px 16px; /* Botão menor */
   }
-  
-  .proec-link {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #007bff; /* Cor do texto do link */
-    font-size: 1.25rem; /* Tamanho da fonte */
-    margin-top: 1rem; /* Espaçamento superior */
-    transition: color 0.3s ease; /* Transição suave de cor */
+
+  .feature {
+    flex: 1 1 100%; /* Cada recurso ocupa toda a largura */
   }
-  
-  .proec-link:hover {
-    color: #0056b3; /* Cor do link ao passar o mouse */
+}
+
+@media (max-width: 480px) {
+  .hero-image img {
+    max-width: 100%; /* Ajusta para telas muito pequenas */
   }
-  
+
+  .cta-button {
+    font-size: 0.9rem; /* Texto do botão menor */
+    padding: 6px 12px;
+  }
+}

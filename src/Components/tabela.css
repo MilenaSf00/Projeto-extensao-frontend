@@ -83,7 +83,7 @@ button:focus {
 /* tabela.css */
 
 .header-container {
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #24cc86, #137a63);
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -96,13 +96,13 @@ button:focus {
 .header-container h1 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: #ffffff;
 }
 
 .header-container p {
   margin: 10px 0 0;
   font-size: 16px;
-  color: #666;
+  color: #f4f4f4;
 }
 
 

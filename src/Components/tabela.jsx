@@ -468,6 +468,8 @@ const TabelaProjetos = () => {
       <div className="header-container">
         <h1>Painel de Informações dos Projetos</h1>
         <p>Gerencie e visualize os projetos com facilidade usando os filtros abaixo para refinar sua pesquisa.</p>
+        <p>Relatório 16004 - Projetos de Extensão. </p>
+        <p>Última atualização 02/12/24 </p>
       </div>
 
       <button onClick={() => setShowFilters(!showFilters)}>

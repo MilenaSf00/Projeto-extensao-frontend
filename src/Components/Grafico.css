@@ -1,29 +1,39 @@
-/* Grafico.css */
+.grafico-container {
+  padding: 20px;
+  margin-top: 80px; /* Ajuste a margem superior se necessário */
+}
+
+.filters {
+  display: flex;
+  gap: 20px; /* Espaço entre os botões */
+  justify-content: center;
+  margin-top: 100px; /* Aumente a margem superior para garantir que os botões fiquem visíveis */
+  margin-bottom: 30px; /* Ajuste para dar mais espaço entre os filtros e os gráficos */
+}
+
 .chart-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    padding: 20px;
-    margin-top: 80px; /* Ajuste conforme a altura da sua navbar */
-  }
-  
-  .chart-section {
-    flex: 1 1 calc(50% - 20px); /* Ajusta o tamanho dos gráficos, 2 por linha em telas maiores */
-    max-width: 600px;
-    box-sizing: border-box;
-  }
-  
-  .chart-section h2 {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .chart {
-    width: 100%;
-    height: 400px; /* Altura dos gráficos */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.chart-section {
+  flex: 1 1 calc(50% - 20px); /* Ajusta o tamanho dos gráficos, 2 por linha em telas maiores */
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.chart-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.chart {
+  width: 100%;
+  height: 400px; /* Altura dos gráficos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
