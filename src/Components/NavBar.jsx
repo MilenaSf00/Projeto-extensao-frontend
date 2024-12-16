@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartBar, faChartPie, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'; 
-import 'C:/Users/milena/Documents/Projeto Proec/Front-end/project-extensao/src/NavBar.css'; 
+import 'C:/Users/milena/Documents/PROJETO_DE_EXTENSÃO_SISTEMA_PROEC/frontend/src/NavBar.css'; 
 
 const Navbar = () => {
   return (
