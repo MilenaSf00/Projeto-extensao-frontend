@@ -5,12 +5,23 @@ table {
   border-collapse: collapse;
   margin: 2rem 0;
   font-size: 1rem;
+  
+}
+
+
+.table-container {
+  width: 100%; /* Ou a largura desejada */
+  overflow-x: auto; /* Permite o scroll horizontal */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  max-width: 100%; /* Evita que o contêiner tenha largura maior que a tela */
 }
 
 th, td {
-  padding: 1rem;
+
   text-align: left;
   border-bottom: 1px solid #ddd;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
 }
 
 th {

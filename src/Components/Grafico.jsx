@@ -215,12 +215,14 @@ const Grafico = () => {
           <div className="chart">
             <Pie data={dataModalidades} options={optionsPie} />
           </div>
+          <p className="legend-info">Clique nas legendas para ocultar ou mostrar categorias.</p>
         </div>
         <div className="chart-section">
           <h2>Projetos de Extensão por Área de Conhecimento</h2>
           <div className="chart">
             <Pie data={dataAreasConhecimento} options={optionsPie} />
           </div>
+          <p className="legend-info">Clique nas legendas para ocultar ou mostrar categorias.</p>
         </div>
         <div className="chart-section">
           <h2>Projetos de Extensão por Área Temática</h2>
@@ -231,8 +233,9 @@ const Grafico = () => {
         <div className="chart-section">
           <h2>Projetos de Extensão por Situação</h2>
           <div className="chart">
-            <Bar data={dataSituacao} options={optionsBar} />
+            <Pie data={dataSituacao} options={optionsPie} />
           </div>
+          <p className="legend-info">Clique nas legendas para ocultar ou mostrar categorias.</p>
         </div>
       </div>
     </div>

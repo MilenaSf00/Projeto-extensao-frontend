@@ -10,7 +10,20 @@
   margin-top: 100px; /* Aumente a margem superior para garantir que os botões fiquem visíveis */
   margin-bottom: 30px; /* Ajuste para dar mais espaço entre os filtros e os gráficos */
 }
+.chart-section {
+  display: flex;
+  flex-direction: column; /* Alinha os itens na coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento entre os gráficos */
+}
 
+.legend-info {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px; /* Espaço entre o gráfico e o texto */
+}
 .chart-container {
   display: flex;
   flex-wrap: wrap;

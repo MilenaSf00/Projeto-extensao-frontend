@@ -415,6 +415,9 @@ const TabelaProjetos = () => {
         const response = await axios.get('https://projeto-extensao-backend.vercel.app/projetos');
         //const response = await axios.get('http://localhost:3333/projetos');
         setProjetos(response.data);
+        const distinctLinhas = [...new Set(response.data.map(projeto => projeto.linha_tematica))];
+      console.log('Linhas Temáticas recebidas do servidor:', distinctLinhas);
+    
       } catch (error) {
         console.error('Erro ao buscar projetos:', error);
       }
@@ -509,42 +512,46 @@ const TabelaProjetos = () => {
         <h3>Total de resultados encontrados: {filteredProjetos.length}</h3>
       </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Título Projeto</th>
-            <th>Modalidade</th>
-            <th>Campus</th>
-            <th>Área de Conhecimento</th>
-            <th>Área Temática</th>
-            <th>Coord. Projeto</th>
-            <th>Data Início</th>
-            <th>Data Fim</th>
-            <th>Situação</th>
-            <th>Ação</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredProjetos.map(projeto => (
-            <tr key={projeto.id_projeto}>
-              <td>{projeto.titulo_projeto}</td>
-              <td>{projeto.modalidade}</td>
-              <td>{projeto.unidade_origem}</td>
-              <td>{projeto.area_conhecimento}</td>
-              <td>{projeto.area_tematica}</td>
-              <td>{projeto.coord_projeto}</td>
-              <td>{new Date(projeto.dt_inicio_proj).toLocaleDateString()}</td>
-              <td>{new Date(projeto.dt_fim_proj).toLocaleDateString()}</td>
-              <td>{projeto.situacao}</td>
-              <td>
-                <button onClick={() => openModal(projeto)}>
-                  <FontAwesomeIcon icon={faEye} />
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Título Projeto</th>
+        <th>Modalidade</th>
+        <th>Campus</th>
+        <th>Área de Conhecimento</th>
+        {/*<th>Área Temática</th>*/}
+        <th>Linha Temática</th>
+        <th>Coord. Projeto</th>
+        <th>Data Início</th>
+        <th>Data Fim</th>
+        <th>Situação</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {filteredProjetos.map(projeto => (
+        <tr key={projeto.id_projeto}>
+          <td>{projeto.titulo_projeto}</td>
+          <td>{projeto.modalidade}</td>
+          <td>{projeto.unidade_origem}</td>
+          <td>{projeto.area_conhecimento}</td>
+          {/*<td>{projeto.area_tematica}</td>*/}
+          <td>{projeto.linha_tematica}</td>
+          <td>{projeto.coord_projeto}</td>
+          <td>{new Date(projeto.dt_inicio_proj).toLocaleDateString()}</td>
+          <td>{new Date(projeto.dt_fim_proj).toLocaleDateString()}</td>
+          <td>{projeto.situacao}</td>
+          <td>
+            <button onClick={() => openModal(projeto)}>
+              <FontAwesomeIcon icon={faEye} />
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
       {/* Modal incorporada diretamente no componente */}
       {selectedProjeto && (
@@ -554,7 +561,7 @@ const TabelaProjetos = () => {
             <h2>{selectedProjeto.titulo_projeto}</h2>
             <p><strong>Unidade Origem:</strong> {selectedProjeto.unidade_origem}</p>
             <p><strong>Área de Conhecimento:</strong> {selectedProjeto.area_conhecimento}</p>
-            <p><strong>Área Temática:</strong> {selectedProjeto.area_tematica}</p>
+            {/*<p><strong>Área Temática:</strong> {selectedProjeto.area_tematica}</p>*/}
             <p><strong>Linha Temática:</strong> {selectedProjeto.linha_tematica}</p>
             <p><strong>Coord. Projeto:</strong> {selectedProjeto.coord_projeto}</p>
             <p><strong>Email Coord.:</strong> {selectedProjeto.email_coord_projeto}</p>
