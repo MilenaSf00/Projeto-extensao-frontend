@@ -1,11 +1,11 @@
 // App.js
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Tabela from './Components/Tabela';
-import HomePage from './Components/HomePage'; // Importe o componente HomePage
-import Footer from './Components/footer'; 
+import Navbar from '../src/Components/NavBar';
+import Tabela from '../src/Components/tabela';
+import HomePage from '../src/Components/HomePage'; // Importe o componente HomePage
+import Footer from '../src/Components/footer'; 
 import './App.css';
-import Grafico from './Components/Grafico';
+import Grafico from '../src/Components/Grafico';
 
 function App() {
   return (
