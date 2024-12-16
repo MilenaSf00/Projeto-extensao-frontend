@@ -1,0 +1,64 @@
+/* Components/Navbar.css */
+/* Components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #24cc86;
+    padding: 1.5em;
+    border-bottom: 2px solid rgb(198, 209, 198);
+    font-family: Arial, sans-serif;
+    width: 100%; /* Garante que a Navbar ocupe toda a largura da tela */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+  }
+  
+
+.logoLink {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #ffffff; 
+    margin-right: 3rem;
+}
+
+.subLogo {
+    font-size: 1em; 
+    color: white; 
+    margin-top: 0.2em; 
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    font-size: 1.1em;
+    list-style: none;
+    align-items: center;
+    font-weight: bold;
+    margin: 0; /* Remover margem esquerda para centralizar os itens */
+    padding: 0; /* Remover padding para garantir que ocupe a largura total */
+    flex: 1; /* Fazer com que a lista ocupe o espaço restante */
+    justify-content: flex-end; /* Alinhar itens à direita */
+}
+
+.item {
+    margin-right: 1em;
+}
+
+.item a {
+    color: #f8f8f8;
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: rgb(100, 97, 107);
+}
+
+.navbar .item a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+  }
+  
+  .navbar .item a svg {
+    font-size: 1.2rem; /* Tamanho do ícone */
+  }
+  
