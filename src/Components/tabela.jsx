@@ -384,7 +384,7 @@ export default TabelaProjetos;*/
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import CampusFilter from '../../src/Components/campusFilter';
-import SituacaoFilter from '../../src/Components/situacaoProjectss';
+import SituacaoFilter from '../../src/Components/situacaoProjects';
 import AreaConhecimentoFilter from '../../src/Components/AreaConhecimentoFilter';
 import LinhaTematicaFilter from '../../src/Components/LinhaTematicaFilter';
 import ModalidadeFilter from '../../src/Components/ModalidadeFilter';
