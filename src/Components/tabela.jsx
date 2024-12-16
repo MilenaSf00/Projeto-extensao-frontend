@@ -387,7 +387,7 @@ import CampusFilter from './campusFilter';
 import SituacaoFilter from './situacaoProjects';
 //import AreaConhecimentoFilter from '../../src/Components/AreaConhecimentoFilter';
 import AreaConhecimentoFilter from './areaConhecimentoFilter';
-import LinhaTematicaFilter from './LinhaTematicaFilter';
+import LinhaTematicaFilter from './linhaTematicaFilter';
 import ModalidadeFilter from './ModalidadeFilter';
 import AnoFilter from './AnoFilter';
 import useFilteredProjects from './filterProjects';
