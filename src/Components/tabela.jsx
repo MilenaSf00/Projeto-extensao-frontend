@@ -396,6 +396,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'; // Importa o ícone de olho para "Ver Mais"
 import './tabela.css';
 
+
+
 const TabelaProjetos = () => {
   const [projetos, setProjetos] = useState([]);
   const [selectedCampus, setSelectedCampus] = useState([]);
