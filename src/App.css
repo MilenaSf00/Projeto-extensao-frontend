@@ -1,0 +1,43 @@
+/* app.css */
+
+/* Estilo para a Navbar */
+nav {
+  background-color: #ffffff;
+  color: white;
+  padding: 1rem;
+  width: 100vw; /* Usa 100% da largura da viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box; /* Garante que o padding seja incluso na largura */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around; /* Distribui os itens com espaço ao redor */
+  width: 100%; /* Garante que os itens ocupem a largura completa */
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Remover qualquer espaçamento padrão do body para garantir que a navbar esteja colada nas bordas */
+body {
+  margin: 0;
+  padding: 0;
+}
