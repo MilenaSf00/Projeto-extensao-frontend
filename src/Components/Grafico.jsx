@@ -14,6 +14,9 @@ const Grafico = () => {
   const [dataAreaTematica, setDataAreaTematica] = useState({ labels: [], datasets: [] });
   const [loading, setLoading] = useState(true);
 
+
+
+  
   useEffect(() => {
     const fetchProjetos = async () => {
       try {
