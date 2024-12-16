@@ -383,14 +383,14 @@ export default TabelaProjetos;*/
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import CampusFilter from '../../src/Components/campusFilter';
-import SituacaoFilter from '../../src/Components/situacaoProjects';
+import CampusFilter from './campusFilter';
+import SituacaoFilter from './situacaoProjects';
 //import AreaConhecimentoFilter from '../../src/Components/AreaConhecimentoFilter';
 import AreaConhecimentoFilter from './areaConhecimentoFilter';
-import LinhaTematicaFilter from '../../src/Components/LinhaTematicaFilter';
-import ModalidadeFilter from '../../src/Components/ModalidadeFilter';
-import AnoFilter from '../../src/Components/AnoFilter';
-import useFilteredProjects from '../../src/Components/filterProjects';
+import LinhaTematicaFilter from './LinhaTematicaFilter';
+import ModalidadeFilter from './ModalidadeFilter';
+import AnoFilter from './AnoFilter';
+import useFilteredProjects from './filterProjects';
 import ExportCSVButton from './exportCsv';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'; // Importa o ícone de olho para "Ver Mais"
